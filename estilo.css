@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/WhatsApp\ Image\ 2024-05-09\ at\ 17.32.29\ \(2\).jpeg');
+    background-position: center;
+    background-size: contain; /* Alteração na propriedade */
+    background-repeat: no-repeat;
+}
+
+
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.login-form input, .login-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.login-form button {
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider .text {
+    margin: 0 10px;
+    color: #999;
+}
+
+.signup-option a {
+    display: block;
+    background-color: #385185;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.forgot-password a {
+    color: #003569;
+    text-decoration: none;
+}
+
+.signup-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7ccf87;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #ccdcff;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="paginainicial.html">Página Inicial</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="doaçoes.html">Requisitos para Doação de Sangue</a></li>
+                <li><a href="multiroes.html">Mutirões </a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="contato.html      ">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+            
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <form action="#">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+<div class="contato">
+    <h1>Entre em Contato</h1>
+    <div class="contact-links">
+      <a href="https://www.instagram.com/seu_instagram" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/sua_pagina" target="_blank">Facebook</a>
+      <a href="https://wa.me/seu_numero_whatsapp" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const response = await fetch('http://localhost:3000/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
+
+        if (response.ok) {
+            alert('Mensagem enviada com sucesso!');
+        } else {
+            alert('Erro ao enviar a mensagem.');
+        }
+    });
+</script>
+</html>

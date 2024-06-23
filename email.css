@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.inputs {
+    margin-top: 10px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+}
+
+.action {
+    margin-top: 24px;
+    padding: 12px 16px;
+    border-radius: 9px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    text-decoration: none; /* Remover sublinhado padrão */
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.action:hover {
+    background-color: red;
+}

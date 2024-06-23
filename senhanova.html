@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Senha</title>
+    <link rel="stylesheet" href="senhanova.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Por favor me informe sua nova senha</h2>
+        <form id="senhaForm">
+            <input type="password" id="novaSenha" name="novaSenha" required>
+            <button type="button" id="showPassword">Mostrar Senha</button><br><br>
+            <input type="submit" value="Salvar Nova Senha">
+        </form>
+        <br>
+        <a href="index.html" class="btn">Voltar para a Página Inicial</a>
+    </div>
+
+    <script>
+
+        document.getElementById("showPassword").addEventListener("click", function() {
+            var senhaInput = document.getElementById("novaSenha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        });
+
+        
+        document.getElementById("senhaForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var novaSenha = document.getElementById("novaSenha").value;
+            if (novaSenha) {
+                localStorage.setItem("userPassword", novaSenha); 
+                alert("Nova senha salva com sucesso!");
+                window.location.href = "index.html"; 
+            }
+        });
+    </script>
+</body>
+</html>
